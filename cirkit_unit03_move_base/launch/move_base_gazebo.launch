@@ -4,7 +4,7 @@
   <!-- Run the map server -->
   
   <!-- clearpath_playpen  -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_navigation_gazebo)/map/playpen_map.yaml" />
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_move_base)/map/playpen_map.yaml" />
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <!--param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" /-->
