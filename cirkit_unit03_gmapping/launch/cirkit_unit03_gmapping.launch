@@ -1,6 +1,6 @@
 <launch>
 
-  <include file="$(find cirkit_unit03_driver)/launch/third_robot.launch"/>
+  <include file="$(find cirkit_unit03_driver)/launch/cirkit_unit03.launch"/>
   <include file="$(find cirkit_unit03_bringup)/launch/sensor_bringup.launch"/>
   
   <include file="$(find cirkit_unit03_control)/launch/laserscan_merger.launch" />
