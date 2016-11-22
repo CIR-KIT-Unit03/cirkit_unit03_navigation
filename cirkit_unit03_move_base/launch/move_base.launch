@@ -26,19 +26,22 @@
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_navigation)/map/201511080238.yaml" />  -->
   <!-- Tsukuba Challenge 2016  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_navigation)/map/ooshimizu.yaml" /> -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_move_base)/map/tukutyare2016_outside-8.yaml" />
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_move_base)/map/tukutyare2016_outside-8.yaml" /> -->
 
   <!-- Tsukuba Kenshu Center -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_navigation)/map/kenshu_center.yaml" /> -->
   <!-- Waypoint marker -->
   
+  <!-- For sample test -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_move_base)/map/playpen_map.yaml" />
+
   <node pkg="ros_waypoint_generator" type="ros_waypoint_server" name="ros_waypoint_server" args="--load $(find waypoint_navigator)/waypoints/2016-11-06-11-32-09.csv" output="screen" />
   
   <!--- Run URG filter-->
-  <include file="$(find cirkit_unit03_urg_filter)/launch/urg_laser_filter.launch" />
+  <include file="$(find cirkit_unit03_control)/launch/urg_laser_filter.launch" />
 
   <!--- Run AMCL -->
-  <include file="$(find cirkit_unit03_navigation)/amcl/amcl_diff.launch" />
+  <include file="$(find cirkit_unit03_amcl)/launch/amcl_diff.launch" />
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <rosparam file="$(find cirkit_unit03_move_base)/config/robot/costmap_common_params.yaml" command="load" ns="global_costmap" />
