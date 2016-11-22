@@ -30,10 +30,10 @@ max_planning_retries: 5
 
 recovery_behaviors:
   - {name: conservative_reset, type: clear_costmap_recovery/ClearCostmapRecovery}
-  - {name: step_back_and_max_steer_recovery, type: step_back_and_max_steer_recovery/StepBackAndMaxSteerRecovery}
+  - {name: stepback_and_steerturn_recovery, type: step_back_and_max_steer_recovery/StepBackAndSteerTurnRecovery}
   - {name: aggressive_reset, type: clear_costmap_recovery/ClearCostmapRecovery}
 
-step_back_and_max_steer_recovery:
+stepback_and_steerturn_recovery:
     # 最初の一回だけ旋回したい場合にtrue
     only_single_steering: true
     # リカバリ行動の試行回数[回]
