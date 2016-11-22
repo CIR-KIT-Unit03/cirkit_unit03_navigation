@@ -35,7 +35,7 @@
   <!-- For sample test -->
   <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_move_base)/map/playpen_map.yaml" />
 
-  <node pkg="ros_waypoint_generator" type="ros_waypoint_server" name="ros_waypoint_server" args="--load $(find waypoint_navigator)/waypoints/2016-11-06-11-32-09.csv" output="screen" />
+  <node pkg="waypoint_generator" type="waypoint_server" name="waypoint_server" args="--load $(find waypoint_navigator)/waypoints/2016-11-06-11-32-09.csv" output="screen" />
   
   <!--- Run URG filter-->
   <include file="$(find cirkit_unit03_control)/launch/urg_laser_filter.launch" />
