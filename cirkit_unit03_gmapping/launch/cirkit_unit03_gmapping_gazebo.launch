@@ -1,0 +1,56 @@
+<launch>
+  <include file="$(find steer_drive_controller)/launch/steer_drive_test_setting.launch"/>
+  <node pkg="topic_tools" type="relay" name="relay_base_scan" args="/cirkit_unit03/laser/base_scan /base_scan"/>
+  <node pkg="topic_tools" type="relay" name="relay_base_scan2" args="cirkit_unit03/laser/base_scan2 /base_scan2"/>
+
+  <include file="$(find cirkit_unit03_control)/launch/laserscan_merger.launch">
+
+  </include>  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find cirkit_unit03_navigation)/config/gazebo/autorun_gazebo.rviz" required="true" />
+
+  <!-- arg name="scan_topic" default="third_robot/laser/base_scan" /-->
+  <arg name="scan_topic" default="scan_multi" />
+  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping">
+    <rosparam>
+      use_sim_time: true
+
+      odom_frame: odom
+      base_frame: base_link
+      map_frame: map
+
+      map_update_interval: 0.5 # Publish new map
+
+      maxUrange: 5.5 # Should be just less than sensor range
+      maxRange: 6.1 # Should be just greater than sensor range
+      particles: 100 # Increased from 80
+
+      # Update frequencies
+      linearUpdate: 0.3
+      angularUpdate: 0.5
+      temporalUpdate: 2.0
+      resampleThreshold: 0.5
+
+      # Initial Map Size
+      xmin: -100.0
+      ymin: -100.0
+      xmax: 100.0
+      ymax: 100.0
+      delta: 0.05
+
+      # All default
+      sigma: 0.05
+      kernelSize: 1
+      lstep: 0.05
+      astep: 0.05
+      iterations: 5
+      lsigma: 0.075
+      ogain: 3.0
+      lskip: 0
+      llsamplerange: 0.01
+      llsamplestep: 0.01
+      lasamplerange: 0.005
+      lasamplestep: 0.005
+
+    </rosparam>
+    <remap from="scan" to="$(arg scan_topic)"/>
+  </node>
+</launch>
