@@ -1,0 +1,20 @@
+<launch>
+  <master auto="start"/>
+
+  <!-- Run the map server -->
+  
+  <!-- clearpath_playpen  -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_navigation_gazebo)/map/playpen_map.yaml" />
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <!--param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" /-->
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" /> 
+    <rosparam file="$(find cirkit_unit03_move_base)/config/robot/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find cirkit_unit03_move_base)/config/robot/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find cirkit_unit03_move_base)/config/robot/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find cirkit_unit03_move_base)/config/robot/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find cirkit_unit03_move_base)/config/robot/base_local_planner_params.yaml" command="load" />
+    <remap from="cmd_vel" to="/steer_drive_controller/cmd_vel" />
+    <remap from="odom" to="/steer_drive_controller/odom" />
+  </node>
+</launch>

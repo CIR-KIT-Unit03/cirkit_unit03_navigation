@@ -5,7 +5,7 @@
 
   <include file="$(find cirkit_unit03_control)/launch/laserscan_merger.launch">
 
-  </include>  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find cirkit_unit03_navigation_gazebo)/config/autorun_gazebo.rviz" required="true" />
+  </include>  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find cirkit_unit03_navigation)/config/gazebo/autorun_gazebo.rviz" required="true" />
 
   <!-- arg name="scan_topic" default="third_robot/laser/base_scan" /-->
   <arg name="scan_topic" default="scan_multi" />
