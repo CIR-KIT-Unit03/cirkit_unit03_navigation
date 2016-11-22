@@ -30,7 +30,7 @@ max_planning_retries: 5
 
 recovery_behaviors:
   - {name: conservative_reset, type: clear_costmap_recovery/ClearCostmapRecovery}
-  - {name: stepback_and_steerturn_recovery, type: step_back_and_max_steer_recovery/StepBackAndSteerTurnRecovery}
+  - {name: stepback_and_steerturn_recovery, type: stepback_and_steerturn_recovery/StepBackAndSteerTurnRecovery}
   - {name: aggressive_reset, type: clear_costmap_recovery/ClearCostmapRecovery}
 
 stepback_and_steerturn_recovery:
