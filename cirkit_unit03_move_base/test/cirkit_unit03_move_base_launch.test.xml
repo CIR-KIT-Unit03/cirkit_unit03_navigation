@@ -1,0 +1,3 @@
+<launch>
+  <include file="$(find cirkit_unit03_move_base)/launch/move_base.launch" />
+</launch>
