@@ -7,8 +7,8 @@
   <maintainer email="k104009y@mail.kyutech.jp">Arita Yuta</maintainer>
   <maintainer email="p595201m@mail.kyutech.jp">Masaru Morita</maintainer>
   <license>BSD</license>
-  <url type="bugtracker">https://github.com/husky/husky_desktop/issues</url>
-  <url type="repository">https://github.com/husly/husky_desktop</url>
+  <url type="bugtracker">https://github.com/CIR-KIT-Unit03/cirkit_unit03_navigation/issues</url>
+  <url type="repository">https://github.com/CIR-KIT-Unit03/cirkit_unit03_navigation</url>
   <author email="cirkit.infomation@gmail.com">CIR-KIT</author>
 
   <buildtool_depend>catkin</buildtool_depend>
