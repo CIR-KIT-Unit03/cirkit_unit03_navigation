@@ -9,6 +9,6 @@
 
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find cirkit_unit03_viz)/rviz/autorun3.rviz" required="true" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find cirkit_unit03_viz)/rviz/robot/autorun3.rviz" required="true" />
 
 </launch>
