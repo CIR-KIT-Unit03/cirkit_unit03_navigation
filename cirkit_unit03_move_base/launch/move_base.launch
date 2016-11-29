@@ -1,9 +1,5 @@
 <launch>
   <master auto="start"/>
-
-  <!-- For sample test -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_move_base)/map/playpen_map.yaml" />
-
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <rosparam file="$(find cirkit_unit03_move_base)/config/robot/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find cirkit_unit03_move_base)/config/robot/costmap_common_params.yaml" command="load" ns="local_costmap" />
