@@ -11,16 +11,5 @@
   <author email="cirkit.infomation@gmail.com">CIR-KIT</author>
 
   <buildtool_depend>catkin</buildtool_depend>
-  <exec_depend>cirkit_unit03_bringup</exec_depend>
-  <exec_depend>cirkit_unit03_control</exec_depend>
-  <exec_depend>cirkit_unit03_description</exec_depend>
-  <exec_depend>cirkit_unit03_driver</exec_depend>
   <exec_depend>gmapping</exec_depend>
-  <exec_depend>joint_state_publisher</exec_depend>
-  <exec_depend>steer_drive_controller</exec_depend>
-  <exec_depend>topic_tools</exec_depend>
-  <exec_depend>rviz</exec_depend>
-
-  <export>
-  </export>
 </package>
