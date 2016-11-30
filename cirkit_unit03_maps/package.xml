@@ -1,23 +1,15 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>cirkit_unit03_navigation</name>
+  <name>cirkit_unit03_maps</name>
   <version>0.1.0</version>
-  <description>Metapackage for Navigation of CIR-KIT-Unit03.</description>
+  <description>The map package for CIR-KIT-Unit03.</description>
 
   <maintainer email="k104009y@mail.kyutech.jp">Arita Yuta</maintainer>
   <maintainer email="p595201m@mail.kyutech.jp">Masaru Morita</maintainer>
   <license>BSD</license>
-  <url type="bugtracker">https://github.com/CIR-KIT-Unit03/cirkit_unit03_navigation/issues</url>
   <url type="repository">https://github.com/CIR-KIT-Unit03/cirkit_unit03_navigation.git</url>
+  <url type="bugtracker">https://github.com/CIR-KIT-Unit03/cirkit_unit03_navigation/issues</url>
   <author email="cirkit.infomation@gmail.com">CIR-KIT</author>
 
   <buildtool_depend>catkin</buildtool_depend>
-  <exec_depend>cirkit_unit03_amcl</exec_depend>
-  <exec_depend>cirkit_unit03_gmapping</exec_depend>
-  <exec_depend>cirkit_unit03_maps</exec_depend>
-  <exec_depend>cirkit_unit03_move_base</exec_depend>
-
-  <export>
-    <metapackage/>
-  </export>
 </package>
