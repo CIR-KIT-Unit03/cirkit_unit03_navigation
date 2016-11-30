@@ -1,3 +1,0 @@
-<launch>
-  <include file="$(find cirkit_unit03_gmapping)/launch/cirkit_unit03_gmapping.launch" />
-</launch>
