@@ -1,6 +1,10 @@
 # cirkit_unit03_navigation [![Build Status](https://travis-ci.org/CIR-KIT-Unit03/cirkit_unit03_navigation.svg?branch)](https://travis-ci.org/CIR-KIT-Unit03/cirkit_unit03_navigation) [![Slack](https://img.shields.io/badge/Slack-CIR--KIT-blue.svg)](http://cir-kit.slack.com/messages/unit03_navigation)
 Navigation packages for CIR-KIT-Unit03.
 
+# 地図の格納場所について
+- 地図は[`cirkit_unit03_navigation/cirkit_unit03_maps/map`](https://github.com/CIR-KIT-Unit03/cirkit_unit03_navigation/tree/master/cirkit_unit03_maps/map)に格納する．
+- 地図は容量が大きいため，git管理に加えない．
+
 ## Installation
 #### **!! CAUTION !!  DO NOT INSTALL** this repository **ALONE**.  
 We highly recommend install this repository with [cirkit_unit03_pkgs](https://github.com/CIR-KIT-Unit03/cirkit_unit03_pkgs).
