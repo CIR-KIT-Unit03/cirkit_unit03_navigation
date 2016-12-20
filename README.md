@@ -4,6 +4,8 @@
 ## Summary
 Navigation packages for CIR-KIT-Unit03 indluding navigation, localization, SLAM, and map storage.
 
+For CIR-KIT-Unit03 instructions and tutorials, please see http://wiki.ros.org/Robots/CIR-KIT-Unit03.
+
 - cirkit_unit03_amcl : [amcl](http://wiki.ros.org/amcl) (localization) configurations and launch files.
 - cirkit_unit03_gmapping : [gmapping](http://wiki.ros.org/gmapping) (SLAM) configurations and launch files.
 - cirkit_unit03_maps : Storage space of maps.
