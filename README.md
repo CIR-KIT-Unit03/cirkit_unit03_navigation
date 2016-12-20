@@ -1,9 +1,17 @@
 # cirkit_unit03_navigation [![Build Status](https://travis-ci.org/CIR-KIT-Unit03/cirkit_unit03_navigation.svg?branch)](https://travis-ci.org/CIR-KIT-Unit03/cirkit_unit03_navigation) [![Slack](https://img.shields.io/badge/Slack-CIR--KIT-blue.svg)](http://cir-kit.slack.com/messages/unit03_navigation)
-Navigation packages for CIR-KIT-Unit03.
 
-# 地図の格納場所について
-- 地図は[`cirkit_unit03_navigation/cirkit_unit03_maps/map`](https://github.com/CIR-KIT-Unit03/cirkit_unit03_navigation/tree/master/cirkit_unit03_maps/map)に格納する．
-- 地図は容量が大きいため，git管理に加えない．
+
+## Summary
+Navigation packages for CIR-KIT-Unit03 indluding navigation, localization, SLAM, and map storage.
+
+For CIR-KIT-Unit03 instructions and tutorials, please see http://wiki.ros.org/Robots/CIR-KIT-Unit03.
+
+- cirkit_unit03_amcl : [amcl](http://wiki.ros.org/amcl) (localization) configurations and launch files.
+- cirkit_unit03_gmapping : [gmapping](http://wiki.ros.org/gmapping) (SLAM) configurations and launch files.
+- cirkit_unit03_maps : Storage space of maps.
+  - By default, only sample maps are stored here.
+  - ***We'll never add additional maps in git*** in order to reduce storage size of the repository.
+- cirkit_unit03_move_base : [move_base](http://wiki.ros.org/move_base) (navigation) configurations and launch files.
 
 ## Installation
 #### **!! CAUTION !!  DO NOT INSTALL** this repository **ALONE**.  
