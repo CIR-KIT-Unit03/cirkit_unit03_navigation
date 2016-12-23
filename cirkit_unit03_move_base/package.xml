@@ -17,5 +17,5 @@
   <exec_depend>frontier_exploration</exec_depend>
   <exec_depend>move_base</exec_depend>
   <exec_depend>navfn</exec_depend>
-  <exec_depend>roslaunch</exec_depend>
+  <!--<exec_depend>roslaunch</exec_depend>--> <!-- this is for launch test -->
 </package>
