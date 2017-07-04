@@ -4,8 +4,9 @@ first_map_only: true
 # Publish scans from best pose at a max of 10 Hz
 odom_model_type: diff-corrected
 odom_alpha5: 0.1
-transform_tolerance: 0.2
-gui_publish_rate: 10.0
+#transform_tolerance: 0.1
+transform_tolerance: 2.0  #0.2
+gui_publish_rate: 1 #10.0
 laser_max_beams: 60
 min_particles: 100
 max_particles: 5000
@@ -30,12 +31,11 @@ update_min_d: 0.2
 update_min_a: 0.5
 odom_frame_id: odom
 resample_interval: 1
-transform_tolerance: 0.1
 recovery_alpha_slow: 0.0
 recovery_alpha_fast: 0.0
-# initial_pose_x: 75.630
-# initial_pose_y: 62.509
-# initial_pose_a: -1.220
+initial_pose_x: 5.2 #
+initial_pose_y: -4.4
+initial_pose_a: 1.68
 # initial_pose_x: -2.964
 # initial_pose_y: 57.112
 # initial_pose_a: 1.507
