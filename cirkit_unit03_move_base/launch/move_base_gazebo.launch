@@ -1,8 +1,8 @@
 <launch>
   <master auto="start"/>
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
-    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" /> 
+    <!--param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" /-->
+    <!--param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" /--> 
     <!--rosparam file="$(find cirkit_unit03_move_base)/config/gazebo/costmap_common_params.yaml" command="load" ns="global_costmap" /-->
     <rosparam file="$(find cirkit_unit03_move_base)/config/gazebo/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="$(find cirkit_unit03_move_base)/config/gazebo/local_costmap_params.yaml" command="load" />
